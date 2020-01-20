@@ -120,7 +120,8 @@ const format = function(html) {
     }
 
     let firstAttribute = true;
-    for (let name in attributes) {
+    var sortedAttributes = names.sort()
+    for (var name of sortedAttributes) {
       if (firstAttribute === true) {
         firstAttribute = false;
         appendAttribute(name, attributes[name]);
